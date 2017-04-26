@@ -1,0 +1,51 @@
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+By comparing the two files it helped identify the content added and deleted
+by indicating with a plus and minus sign displayed next to the specific line
+respectively.
+
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+It helps identify bugs and errors easily and enables correcting mistakes by
+comparing different versions of the file. Can access an older version of a
+file and also makes it easier to restore the file to an older version at any
+given point.
+
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+Pros:
+1.Can commit for every logical change and thus avoid too versions saved automatically.
+2.Would be easier to navigate the different commits since the purpose of each is likely to be annotated in the commit message.
+3.Can be accessed or the code can be run offline.
+4.Can use any editor of choice.
+
+Cons:
+1.If forgetful different versions might not be saved when and where necessary.
+2.Possible loss of work in case of sudden system failure.
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+Git enables tracking multiple files together because often multiple files may be connected for a common output. For example in the case of creating a webpage html, css and js files are interlinked and changes may have to be incorporated in all these files. In such cases it makes sense to track multiple files together. Google Docs on the other hand treats each file separately since it isn't generally used for coding purposes and files aren't usually interlinked.
+
+How can you use the commands git log and git diff to view the history of files?
+
+git log displays commitid, author, message, date and time of when a file was last modified and git diff
+enables easy comparison of any two versions of the file or any two commits.
+  SYNTAX:   git log filename
+            git diff commitid1 commitid2
+Here in the output of git log a specific commitid can be selected and its previous version is displayed below that commitid. Now on comparing these two commits in diff, the lines that are followed by ++ or in green have been added to the commitid2 and the lines followed by -- or in red have been deleted from the previous version commitid1.
+Thus git log and git diff can be used to view the history of files.
+
+How might using version control make you more confident to make changes that
+could break something?
+
+With version control it is easy to determine which commit or version introduced any bugs. In git this can be done using git log and git checkout to view a specific a commit. Since you can easily revert back to any of the old versions of a file, version control enables making changes without actually breaking something.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+Creating webpages using html, css and javascript.
