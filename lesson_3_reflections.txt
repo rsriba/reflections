@@ -30,7 +30,7 @@ use one instead of another?
 What is the benefit of having a copy of the last known state of the remote
 stored locally?
 
-    It keeps the repository updated.
+    It makes merging easier and also serves as a reference for easy conflict resolution.
 
 How would you collaborate without using Git or GitHub?  What would be easier,
 and what would be harder?
