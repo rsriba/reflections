@@ -35,7 +35,7 @@ stored locally?
 How would you collaborate without using Git or GitHub?  What would be easier,
 and what would be harder?
 
-    Fill in your answer here
+    Cloud service. Auto saving would make it easier but at the same time might not want to save in case of experimental changes and bug fixing and going back to a specific version would be hard.
 
 When would you want to make changes in a separate branch rather than directly in
 master?  What benefits does each approach have?
