@@ -20,13 +20,56 @@ commit. Thus enables one commit per logical change enhancing easy user experienc
 How can you use the staging area to make sure you have one commit per logical
 change?
 
+    git diff command without any arguments compares the working directory and the
+staging area. This displays any changes that have been made in the working directory
+that hasn't been added to the staging area yet. Now, the modified file or files which
+constitute one logical change can added to the staging area using the git add command.
+Using the git diff --staged command which compares the staging area and the most recent
+commit in the repository displays the changes between the two. Provided the differences
+constitute one logical change the file or files in the staging area can now be commited
+using the git commit command. Similarly any undesired file or files can be removed from
+the staging area using git reset command and the git reset --hard command can be used to
+discard any changes to the working directory or the staging area.
+
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
+    When developing a different language version.
+    When adding an experimental feature.
+Branches would help to keep the different versions separate and later merge if necessary.
+It helps when collaborating with others to add experimental features without compromising
+the main working branch. Also helps compartmentalizing by keeping a master production
+quality branch then separate development branches, feature branches etc. Helps to fix bugs
+easily by going back to the branch and switching back to the specific feature branch.
+
 How do the diagrams help you visualize the branch structure?
+
+    Diagrams makes it easier to visualize the branch structure by keeping track of which
+braches contain which commits and also providing a way to illustrate the rechability
+aspects of commits.
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
+    Merging results in the creation of a commit with the specified branches merged into the
+currently checked-out branch. git merges by comparing the most recent commits with its
+respective parents to determine which lines were added and which lines were removed.
+
 What are the pros and cons of Git’s automatic merging vs. always doing merges
 manually?
+
+PROS
+    Saves a lot of time.
+CONS
+    When merging two branches with changes made in the same area git doesn't differntiate if the two
+are two different chages and both have to be included or if the two are different versions of the same
+code resulting in a similar output(one of which might be memory efficient or time saving). This raises
+a merging conflict in git.
+
+
+A note about git merge
+git merge will also include the currently checked-out branch in the merged version. So if you have branch1 checked out, and you run git merge branch2 branch3, the merged version will combine branch1 as well as branch2 and branch3. That’s because the branch1 label will update after you make the merge commit, so it’s unlikely that you didn’t want the changes from branch1 included in the merge. For this reason, you should always checkout one of the two branches you’re planning on merging before doing the merge. Which one you should check out depends on which branch label you want to point to the new commit.
+
+Since the checked-out branch is always included in the merge, you may have guessed that when you are merging two branches, you don't need to specify both of them as arguments to git merge on the command line. If you want to merge branch2 into branch1, you can simply git checkout branch1 and then type git merge branch2. The only reason to type git merge branch1 branch2 is if it helps you keep better mental track of which branches you are merging.
+
+Also, since the two branches are merged, the order in which they are typed into the command line does not matter. The key is to remember that git merge always merges all the specified branches into the currently checked out branch, creating a new commit for that branch.
