@@ -40,4 +40,6 @@ and what would be harder?
 When would you want to make changes in a separate branch rather than directly in
 master?  What benefits does each approach have?
 
-    Fill in your answer here
+    When collaborating with others might want to get feedback before changing master.
+    Separate branch approach ensures everyone working on a project stay up to date with changes, also serves as a means to make experimental changes without affecting master.
+    Master branch approach makes it so much easier when merging.
